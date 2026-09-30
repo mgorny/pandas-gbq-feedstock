@@ -1,21 +1,20 @@
 schema_version: 1
 
 context:
-  name: pandas-gbq
   version: "0.28.0"
 
 package:
-  name: ${{ name|lower }}
+  name: pandas-gbq
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pandas_gbq-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/p/pandas-gbq/pandas_gbq-${{ version }}.tar.gz
   sha256: daa4ffb80c1c262185059adb4551ac0cc52013ca3b7ab72c11cec1011f242ae5
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
