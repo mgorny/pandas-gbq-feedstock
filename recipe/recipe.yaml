@@ -41,6 +41,9 @@ requirements:
   run_constraints:
     # "tqdm" extra
     - tqdm >=4.23.0
+    # "geopandas" extra
+    - geopandas >=0.14.4
+    - shapely >=1.8.5
 
 tests:
   - python:
@@ -55,6 +58,7 @@ tests:
         - pytest
         - pytest-xdist
         - freezegun
+        - geopandas
     files:
       source:
         - tests/
