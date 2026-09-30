@@ -50,6 +50,16 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
+  - requirements:
+      run:
+        - pytest
+        - pytest-xdist
+        - freezegun
+    files:
+      source:
+        - tests/
+    script:
+      - pytest -vv -nauto tests/unit
 
 about:
   summary: Google BigQuery connector for pandas
